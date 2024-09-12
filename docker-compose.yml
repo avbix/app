@@ -1,0 +1,18 @@
+version: '3' # Версия файла Docker Compose
+
+services:
+  nginx:
+    container_name: nginx # Название контейнера для службы Nginx.
+    image: nginx # Используемый образ Docker для Nginx.
+
+  php:
+    container_name: php # Название контейнера для службы PHP.
+    build: ./www # Путь к директории с Dockerfile для создания образа контейнера.
+
+  mysql:
+    container_name: mysql # Название контейнера для службы MySQL.
+    image: mysql # Используемый образ Docker для MySQL.
+
+  phpmyadmin:
+    container_name: phpmyadmin # Название контейнера для службы phpMyAdmin.
+    image: phpmyadmin # Используемый образ Docker для phpMyAdmin.
